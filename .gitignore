@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/.idea/sonarlint/securityhotspotstore/b/c/bc65a06e6e34cd221f672fe1ddcfabf2ea599052
+/.idea/sonarlint/issuestore/b/c/bc65a06e6e34cd221f672fe1ddcfabf2ea599052
