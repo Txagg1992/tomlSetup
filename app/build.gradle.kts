@@ -69,70 +69,68 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("androidx.activity:activity-compose:1.8.2")
-    implementation(platform("androidx.compose:compose-bom:2023.08.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
 
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
-    coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.5")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext)
+    androidTestImplementation(libs.androidx.test.espresso)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.manifest)
+    coreLibraryDesugaring (libs.android.tools.desugar)
 
     // OpenCSV
-    implementation ("com.opencsv:opencsv:5.5.2")
+    implementation (libs.opencsv)
 
     // Compose dependencies
-    implementation ("androidx.compose.material:material-icons-extended:1.5.1")
-    implementation ("com.google.accompanist:accompanist-flowlayout:0.17.0")
-    implementation ("com.google.accompanist:accompanist-swiperefresh:0.24.2-alpha")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    implementation (libs.androidx.material.icons)
+    implementation (libs.google.accompanist.flow)
+    implementation (libs.google.accompanist.swipe)
+    implementation(libs.androidx.lifecycle.runtime.compose.v270)
+    implementation(libs.androidx.lifecycle.viewmodel.compose.v270)
 
     // Compose Nav Destinations
-    val raam_costa_version = "1.11.2-alpha"
-    implementation ("io.github.raamcosta.compose-destinations:core:$raam_costa_version")
-    ksp ("io.github.raamcosta.compose-destinations:ksp:$raam_costa_version")
+    implementation (libs.raamcosta.destinations.core)
+    ksp (libs.raamcosta.destinations.ksp)
 
     // Coil Compose
-    implementation("io.coil-kt:coil-compose:2.2.2")
+    implementation(libs.coil.kt)
 
     // Dagger - Hilt
-    val hilt_version = "2.51"
-    implementation("com.google.dagger:hilt-android:$hilt_version")
-    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
-    kapt("androidx.hilt:hilt-compiler:1.0.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.hilt.android.compiler)
+    kapt(libs.androidx.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
     //implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
 
     // Paging
-    implementation("androidx.paging:paging-runtime-ktx:3.1.1")
-    implementation("androidx.paging:paging-compose:1.0.0-alpha18")
+    implementation(libs.androidx.paging.runtime.ktx)
+    implementation(libs.androidx.paging.compose)
 
     // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("com.squareup.okhttp3:okhttp:5.0.0-alpha.3")
-    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
+    implementation(libs.retrofit2.retrofit)
+    implementation(libs.retrofit2.converter.moshi)
+    implementation(libs.retrofit2.converter.gson)
+    implementation (libs.okhttp3.okhttp)
+    implementation(libs.okhttp3.logging)
 
     // Room
 
-    implementation ("org.xerial:sqlite-jdbc:3.34.0")
+    implementation (libs.xerial)
     val room_version = "2.6.1"
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
-    implementation("androidx.room:room-ktx:$room_version")
-    ksp("androidx.room:room-compiler:$room_version")
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler.ksp)
 }
 
 kapt{

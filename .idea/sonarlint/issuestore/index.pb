@@ -38,3 +38,7 @@ A
 Mapp/src/androidTest/java/com/curiousapps/tomlsetup/ExampleInstrumentedTest.kt,e\1\e177b5dd597331456fafa037f04c290192e27e0c
 F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
+F
+app/libs.versions.toml,9\c\9c304cd4627566d75b32594426c3a930d6e7a806
+I
+gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
